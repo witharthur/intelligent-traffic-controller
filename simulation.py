@@ -461,10 +461,14 @@ class Main:
     thread3.start()
 
     while True:
+        
         for event in pygame.event.get():
+            
             if event.type == pygame.QUIT:
+                
                 sys.exit()
 
+    
         screen.blit(background,(0,0))   # display background in simulation
         for i in range(0,noOfSignals):  # display signal and set timer according to current status: green, yello, or red
             if(i==currentGreen):
@@ -491,22 +495,15 @@ class Main:
                 screen.blit(redSignal, signalCoods[i])
         signalTexts = ["","","",""]
 
-        # display signal timer and vehicle count
-        for i in range(0,noOfSignals):  
-            signalTexts[i] = font.render(str(signals[i].signalText), True, white, black)
-            screen.blit(signalTexts[i],signalTimerCoods[i]) 
-            displayText = vehicles[directionNumbers[i]]['crossed']
-            vehicleCountTexts[i] = font.render(str(displayText), True, black, white)
-            screen.blit(vehicleCountTexts[i],vehicleCountCoods[i])
-
-        timeElapsedText = font.render(("Time Elapsed: "+str(timeElapsed)), True, black, white)
-        screen.blit(timeElapsedText,(1100,50))
+      
 
         # display the vehicles
         for vehicle in simulation:  
             screen.blit(vehicle.currentImage, [vehicle.x, vehicle.y])
             # vehicle.render(screen)
             vehicle.move()
+        flipped_screen = pygame.transform.flip(screen, True, False)
+        screen.blit(flipped_screen, (0, 0))
         pygame.display.update()
 
 Main()

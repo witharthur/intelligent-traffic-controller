@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# YOLO weights (large files)
+*.weights
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Output files
+output_images/*
+!output_images/.gitkeep
+
+# Test images (optional - remove if you want to include them)
+# test_images/*
+
+# Videos (large files)
+*.mp4
+*.avi
+*.mov
