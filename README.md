@@ -15,9 +15,6 @@ An intelligent traffic signal control system simulation that dynamically optimiz
 - **Visual Simulation**: Interactive Pygame-based traffic simulation with realistic graphics
 - **Performance Analytics**: Tracks wait times, queue lengths, and signal efficiency
 
-## Demo
-
-![Traffic Simulation](Simulation%20Video.mp4)
 
 ## Project Structure
 ```
